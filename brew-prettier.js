@@ -614,9 +614,13 @@ function showHelp() {
   console.log(`
 ╭───────────────────────────────────────────────────────────╮
 │                                                           │
-│            HOMEBREW CODE FORMATTER                        │
+│                  ▗▄▖  ▗▄▄▖ ▗▄▄▖▗▄▄▄▖ ▗▄▖                  │
+│                 ▐▌ ▐▌▐▌   ▐▌   ▐▌   ▐▌ ▐▌                 │
+│                 ▐▛▀▜▌▐▌    ▝▀▚▖▐▛▀▀▘▐▌ ▐▌                 │
+│                 ▐▌ ▐▌▝▚▄▄▖▗▄▄▞▘▐▙▄▄▖▝▚▄▞▘                 │
 │                                                           │
-│  Outil de formatage du code pour les projets Homebrew     │
+│                 Outil de formatage du code                │
+│                                                           │
 │                                                           │
 ╰───────────────────────────────────────────────────────────╯
 
