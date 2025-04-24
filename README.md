@@ -64,13 +64,13 @@ La configuration est sauvegardée dans `~/.brew-prettier/config.json` et compren
 
 ## 🌈 Langages pris en charge
 
-| Catégorie | Extensions |
-|-----------|------------|
-| **JavaScript/TypeScript** | `.js`, `.jsx`, `.ts`, `.tsx` |
-| **HTML et frameworks** | `.html`, `.vue`, `.svelte` |
-| **CSS et préprocesseurs** | `.css`, `.scss`, `.sass`, `.less` |
+| Catégorie                    | Extensions                              |
+| ---------------------------- | --------------------------------------- |
+| **JavaScript/TypeScript**    | `.js`, `.jsx`, `.ts`, `.tsx`            |
+| **HTML et frameworks**       | `.html`, `.vue`, `.svelte`              |
+| **CSS et préprocesseurs**    | `.css`, `.scss`, `.sass`, `.less`       |
 | **Données et documentation** | `.json`, `.yaml`, `.yml`, `.md`, `.mdx` |
-| **Ruby** (Homebrew) | `.rb` |
+| **Ruby** (Homebrew)          | `.rb`                                   |
 
 ## 🔄 Intégration avec Git
 
@@ -100,6 +100,7 @@ L'outil stocke tous ses fichiers dans le répertoire `~/.brew-prettier` :
 Pour publier une nouvelle version de l'outil, suivez ces étapes :
 
 1. **Mise à jour du code source**
+
    ```bash
    # Mettez à jour le code et commitez vos changements
    git add .
@@ -107,42 +108,45 @@ Pour publier une nouvelle version de l'outil, suivez ces étapes :
    ```
 
 2. **Création d'un tag de version**
+
    ```bash
    # Créez un tag pour la nouvelle version
    git tag vx.y.z
-   
+
    # Poussez le tag vers GitHub
    git push origin vx.y.z
    ```
 
 3. **Création d'une release sur GitHub**
-    - Allez sur la page GitHub du projet
-    - Cliquez sur "Releases" puis "Create a new release"
-    - Sélectionnez le tag vx.y.z
-    - Ajoutez un titre et une description pour la release
-    - Publiez la release
+
+   - Allez sur la page GitHub du projet
+   - Cliquez sur "Releases" puis "Create a new release"
+   - Sélectionnez le tag vx.y.z
+   - Ajoutez un titre et une description pour la release
+   - Publiez la release
 
 4. **Mise à jour de la formule Homebrew**
-    - Calculez le nouveau SHA256 de l'archive :
-      ```bash
-      curl -L -o /tmp/brew-prettier.tar.gz https://github.com/ProToolsHub/protoolshub-prettier/archive/refs/tags/vx.y.z.tar.gz
-      shasum -a 256 /tmp/brew-prettier.tar.gz
-      ```
-    - Mettez à jour la formule dans le dépôt homebrew-prettier :
-      ```ruby
-      class BrewPrettier < Formula
-        # ...
-        url "https://github.com/ProToolsHub/protoolshub-prettier/archive/refs/tags/vx.y.z.tar.gz"
-        sha256 "nouveau-sha256-calculé"
-        # ...
-      end
-      ```
-    - Commitez et poussez les changements :
-      ```bash
-      git add Formula/brew-prettier.rb
-      git commit -m "Mise à jour vers la version x.y.z"
-      git push
-      ```
+
+   - Calculez le nouveau SHA256 de l'archive :
+     ```bash
+     curl -L -o /tmp/brew-prettier.tar.gz https://github.com/ProToolsHub/protoolshub-prettier/archive/refs/tags/vx.y.z.tar.gz
+     shasum -a 256 /tmp/brew-prettier.tar.gz
+     ```
+   - Mettez à jour la formule dans le dépôt homebrew-prettier :
+     ```ruby
+     class BrewPrettier < Formula
+       # ...
+       url "https://github.com/ProToolsHub/protoolshub-prettier/archive/refs/tags/vx.y.z.tar.gz"
+       sha256 "nouveau-sha256-calculé"
+       # ...
+     end
+     ```
+   - Commitez et poussez les changements :
+     ```bash
+     git add Formula/brew-prettier.rb
+     git commit -m "Mise à jour vers la version x.y.z"
+     git push
+     ```
 
 5. **Vérification de l'installation**
    ```bash
