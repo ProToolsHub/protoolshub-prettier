@@ -303,10 +303,13 @@ async function setupESLint() {
         dependencies: {
           eslint: '^8.55.0',
           'eslint-config-prettier': '^9.1.0',
-          'eslint-plugin-react': '^7.33.0',
           'eslint-plugin-vue': '^9.19.0',
           '@typescript-eslint/eslint-plugin': '^6.13.0',
           '@typescript-eslint/parser': '^6.13.0',
+        },
+        devDependencies: {
+          react: '^18.2.0',
+          'eslint-plugin-react': '^7.33.0',
         },
       };
 
@@ -320,10 +323,10 @@ async function setupESLint() {
           node: true,
         },
         extends: [
-          'eslint:recommended',
+          'eslint:recommended', 
           'plugin:react/recommended',
-          'plugin:@typescript-eslint/recommended',
-          'prettier',
+          'plugin:@typescript-eslint/recommended', 
+          'prettier'
         ],
         parser: '@typescript-eslint/parser',
         parserOptions: {
@@ -337,6 +340,11 @@ async function setupESLint() {
         rules: {
           'no-unused-vars': 'warn',
           'no-console': 'off',
+        },
+        settings: {
+          react: {
+            version: '18.2.0',
+          },
         },
       };
 
