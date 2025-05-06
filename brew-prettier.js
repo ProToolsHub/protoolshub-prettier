@@ -241,7 +241,7 @@ async function setupPrettier() {
       // Créer un package.json temporaire
       const packageJson = {
         name: 'brew-formatter-prettier',
-        version: '1.0.2',
+        version: '1.0.3',
         private: true,
         dependencies: {
           prettier: '^3.2.0',
@@ -298,7 +298,7 @@ async function setupESLint() {
       // Créer un package.json temporaire
       const packageJson = {
         name: 'brew-formatter-eslint',
-        version: '1.0.2',
+        version: '1.0.3',
         private: true,
         dependencies: {
           eslint: '^8.55.0',
@@ -383,7 +383,7 @@ async function setupStylelint() {
       // Créer un package.json temporaire
       const packageJson = {
         name: 'brew-formatter-stylelint',
-        version: '1.0.2',
+        version: '1.0.3',
         private: true,
         dependencies: {
           stylelint: '^15.11.0',
@@ -655,7 +655,7 @@ EXEMPLES:
  * Affiche la version du programme
  */
 function showVersion() {
-  console.log('Homebrew Code Formatter v1.0.2');
+  console.log('Homebrew Code Formatter v1.0.3');
 }
 
 /**
